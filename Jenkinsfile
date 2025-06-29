@@ -2,7 +2,7 @@ pipeline {
 	agent any
 	environment {
 		VERSION = '3.0.1'
-		DOCKERHUB_CREDENTIALS = credentials('docker-baoqiangy-credentials')
+		DOCKERHUB_CREDENTIALS = credentials('docker-austbrink-credentials')
 	}
 	stages {
 		stage('Build') {
@@ -29,8 +29,8 @@ pipeline {
                 {
                         steps {
 				sh 'sudo chmod 666 /var/run/docker.sock'
-                                sh 'docker build -t baoqiangy/flaskdemo:$VERSION .'
-                                sh 'docker build -t baoqiangy/flaskdemo:latest .'
+                                sh 'docker build -t austbrink/flaskdemo:$VERSION .'
+                                sh 'docker build -t austbrink/flaskdemo:latest .'
                         }
                 }
 
@@ -44,8 +44,8 @@ pipeline {
 		stage('Push Image to Dockerhub') {
 
 			steps {
-				sh 'docker push baoqiangy/flaskdemo:$VERSION'
-				sh 'docker push baoqiangy/flaskdemo:latest'
+				sh 'docker push austbrink/flaskdemo:$VERSION'
+				sh 'docker push austbrink/flaskdemo:latest'
 			}
 		}
 
