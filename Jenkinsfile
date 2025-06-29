@@ -4,6 +4,7 @@ pipeline {
 		VERSION = '3.0.1'
 		DOCKERHUB_CREDENTIALS = credentials('docker-austbrink-credentials')
 	}
+	
 	stages {
 		stage('Build') {
 			steps {

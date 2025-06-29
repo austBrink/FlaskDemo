@@ -6,5 +6,6 @@
 ###  4. Docker  
 ###  5. Python Unit Testing  
 ###  6. CI/CD with Jenkins  
-###  7. Ansible  
+###  7. Ansible 
+
 
